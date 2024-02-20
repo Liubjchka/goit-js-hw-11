@@ -43,6 +43,9 @@ img {
   align-items: center;
   justify-content: center;
   gap: 8px;
+
+  margin-bottom: 32px;
+  margin-top: 36px;
 }
 .form-input {
   border-radius: 4px;
@@ -98,4 +101,29 @@ input:focus {
 .gallery {
   display: flex;
   flex-wrap: wrap;
+  gap: 24px;
+}
+.gallery-item {
+  width: calc((100% - 48px) / 3);
+}
+.description {
+  padding: 4px 20px;
+
+  display: flex;
+  justify-content: space-between;
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+p {
+  font-weight: 600;
+  line-height: 1.33333;
+}
+
+span {
+  font-weight: 400;
+  line-height: 2;
 }

@@ -1,16 +1,18 @@
-export async function onFormSubmit(event) {
+import { refs } from './refs';
+import { pixabayApi } from './pixabayApi';
+import { beError } from './beError';
+import { watchLoader } from './loader.js';
+import { offLoader } from './loader.js';
+import { renderGallary } from './renderGallary';
+
+export function onFormSubmit(event) {
   event.preventDefault();
 
-  refs.gallery.innerHTML = '';
-  userTag = event.target.elements.search.value.trim();
-  console.log(userTag);
+  watchLoader();
 
-  if (userTag === '') {
-    iziToast.error({
-      icon: '',
-      position: 'bottomCenter',
-      message: 'Write something',
-    });
-    return;
-  }
+  refs.galleryList.innerHTML = '';
+  const userTag = event.currentTarget.elements.input.value.trim();
+  pixabayApi(userTag).then(renderGallary).catch(beError).finally(offLoader);
+
+  refs.form.reset();
 }

@@ -14,8 +14,6 @@ p:last-child {
 }
 
 ul {
-  margin: 0;
-  padding: 0;
   list-style: none;
 }
 
@@ -98,4 +96,6 @@ input:focus {
 .hidden {
 }
 .gallery {
+  display: flex;
+  flex-wrap: wrap;
 }

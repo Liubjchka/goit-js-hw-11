@@ -6,7 +6,10 @@ export function beError() {
   iziToast.error({
     position: 'topRight',
     iconUrl: '../img/Group.png',
-    maxWidth: 432,
+    maxWidth: '432',
+    backgroundColor: '#ef4040',
+    messageColor: '#fafafb',
+    messageSize: '16px',
     message:
       'Sorry, there are no images matching your search query.Please try again!',
   });

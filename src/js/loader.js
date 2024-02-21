@@ -4,8 +4,6 @@ export function watchLoader() {
   refs.loader.classList.remove('hidden');
 }
 
-export async function offLoader() {
-  await new Promise(resolve => setTimeout(resolve, 1500));
-
+export function offLoader() {
   refs.loader.classList.add('hidden');
 }
